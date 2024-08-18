@@ -28,7 +28,7 @@ function Hero() {
   }));
 
   const handleDownloadCV = () => {
-    const downloader = new FileDownloader("/Portfólio_pdf.pdf", "Currículo_Tales_Reig.pdf");
+    const downloader = new FileDownloader("/my-portfolio/Curriculo.pdf", "Currículo_Tales_Reig.pdf");
     downloader.download();
   };
 
