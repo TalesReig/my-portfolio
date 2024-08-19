@@ -1,10 +1,12 @@
-import { Box, Container, Grid, Typography, styled } from "@mui/material";
+import { Box, Container, Grid, Typography, styled, Button } from "@mui/material";
 import ImagePerfil from "../../../../assets/images/imagePerfil.jpeg";
 import DownloadIcon from '@mui/icons-material/Download';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import StyledButton from "../../../../components/StyledButtom/StyledButtom";
 import FileDownloader from "../../../../utils/FileDownloader";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { Link } from 'react-router-dom';
 
 function Hero() {
 
@@ -56,28 +58,31 @@ function Hero() {
                     </Typography>
                   </StyledButton>
                 </Grid>
-                <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                <Grid item xs={4} md={2} display="flex" justifyContent="center">
                   <StyledButton
                     component="a"
                     href="https://www.linkedin.com/in/tales-reig-608948302/"
                     rel="noopener noreferrer"
                   >
                     <LinkedInIcon />
-                    <Typography>
-                      LinkedIn
-                    </Typography>
                   </StyledButton>
-                </Grid>
-                <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                </Grid>                
+                <Grid item xs={4} md={2} display="flex" justifyContent="center">
                   <StyledButton
                     component="a"
                     href="https://github.com/TalesReig"
                     rel="noopener noreferrer"
                   >
                     <GitHubIcon />
-                    <Typography>
-                      GitHub
-                    </Typography>
+                  </StyledButton>
+                </Grid>                
+                <Grid item xs={4} md={2} display="flex" justifyContent="center">
+                  <StyledButton
+                    component={Link}
+                    to="/contact"
+                    rel="noopener noreferrer"
+                  >
+                    <MailOutlineIcon />
                   </StyledButton>
                 </Grid>
               </Grid>

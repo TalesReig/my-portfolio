@@ -3,7 +3,7 @@ import { Container, Typography, TextField, Button, styled } from "@mui/material"
 import emailjs from "@emailjs/browser";
 
 const StyledContactForm = styled("div")({
-  backgroundColor: "#f5f5f5",
+  backgroundColor: "#dedede",
   padding: "50px 0",
   minHeight: "100vh",
   display: "flex",

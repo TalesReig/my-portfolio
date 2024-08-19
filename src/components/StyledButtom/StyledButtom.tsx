@@ -1,9 +1,9 @@
 import { Button, ButtonProps, styled } from "@mui/material";
 import { ReactNode } from "react";
 
-// Interface para as propriedades do StyledButton, estendendo ButtonProps para aceitar propriedades do botão padrão
 interface StyledButtonProps extends ButtonProps {
     children: ReactNode;
+    to?: string;
 }
 
 const StyledButton = styled(Button)(({ theme }) => ({

@@ -14,7 +14,7 @@ function Home() {
       <Skills />
       <Resume />
       <Projects />
-      <Email />
+      {/* <Email /> */}
     </>
   )
 }
