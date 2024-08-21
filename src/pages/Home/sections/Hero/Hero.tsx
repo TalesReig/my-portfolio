@@ -47,8 +47,8 @@ function Hero() {
               </Box>
             </Grid>
             <Grid item xs={12} md={7}>
-              <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Tales Reig</Typography>
-              <Typography color="primary.contrastText" variant="h2" textAlign="center" >Analista e Desenvolvedor de Software</Typography>
+            <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Tales Reig</Typography>
+            <Typography color="primary.contrastText" variant="h2" textAlign="center" >Analista e Desenvolvedor de Software</Typography>
               <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
                   <StyledButton onClick={handleDownloadCV}>
@@ -64,9 +64,9 @@ function Hero() {
                     href="https://www.linkedin.com/in/tales-reig-608948302/"
                     rel="noopener noreferrer"
                   >
-                  <LinkedInIcon />
+                    <LinkedInIcon />
                   </StyledButton>
-                </Grid>
+                </Grid>                
                 <Grid item xs={4} md={2} display="flex" justifyContent="center">
                   <StyledButton
                     component="a"
@@ -75,14 +75,14 @@ function Hero() {
                   >
                     <GitHubIcon />
                   </StyledButton>
-                </Grid>
+                </Grid>                
                 <Grid item xs={4} md={2} display="flex" justifyContent="center">
                   <StyledButton
                     component={Link}
                     to="/contact"
                     rel="noopener noreferrer"
                   >
-                  <MailOutlineIcon />
+                    <MailOutlineIcon />
                   </StyledButton>
                 </Grid>
               </Grid>

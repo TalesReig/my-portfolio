@@ -1,15 +1,23 @@
+import { Container, Typography, TextField, Button, styled, Grid } from "@mui/material";
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Container, Typography, TextField, Button, styled } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
-const StyledContactForm = styled("div")({
+const StyledContactForm = styled("div")(({ theme }) => ({
   backgroundColor: "#dedede",
   padding: "50px 0",
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-});
+    height: "100%",
+    [theme.breakpoints.up('xs')]: { // <= mobile
+      padding: "1rem 0rem",
+    },
+    [theme.breakpoints.up('md')]: { // >=mobile
+      padding: "7rem 0rem",
+    }
+  }));  
 
 const Form = styled("form")({
   maxWidth: "600px",
@@ -17,11 +25,6 @@ const Form = styled("form")({
   display: "flex",
   flexDirection: "column",
   gap: "20px",
-});
-
-const StyledButton = styled(Button)({
-  alignSelf: "center",
-  padding: "10px 20px",
 });
 
 const Email: React.FC = () => {
@@ -91,10 +94,25 @@ const Email: React.FC = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
+          <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+            <Grid item xs={4} md={2} display="flex" justifyContent="center">
+              <Button variant="contained" color="primary" type="submit" style={{ padding: '10px 20px' }}>
+                Enviar
+              </Button>
+            </Grid>
 
-          <StyledButton variant="contained" color="primary" type="submit">
-            Enviar
-          </StyledButton>
+            <Grid item xs={4} md={2} display="flex" justifyContent="center">
+              <Button 
+                variant="contained" 
+                color="primary" 
+                component={Link} 
+                to="/my-portfolio"
+                style={{ alignSelf: 'center', padding: '10px 20px' }}
+              >
+                Voltar
+              </Button>
+            </Grid>
+          </Grid>
         </Form>
       </Container>
     </StyledContactForm>
